@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.diamondq.path-expander</groupId>
+    <artifactId>path-expander-masterparent</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <relativePath>../path-expander-masterparent</relativePath>
+  </parent>
+  <artifactId>path-expander-parent</artifactId>
+  <packaging>pom</packaging>
+  <name>DiamondQ Path Expander: Parent</name>
+  <properties>
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.diamondq.common</groupId>
+        <artifactId>common-bom</artifactId>
+        <version>0.2.0-SNAPSHOT</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>com.diamondq.path-expander</groupId>
+        <artifactId>path-expander-bom</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>info.picocli</groupId>
+        <artifactId>picocli</artifactId>
+        <version>4.2.0</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

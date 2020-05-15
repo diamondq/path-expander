@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.diamondq.path-expander</groupId>
+    <artifactId>path-expander-masterparent</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <relativePath>../path-expander-masterparent</relativePath>
+  </parent>
+  <artifactId>path-expander-bom</artifactId>
+  <packaging>pom</packaging>
+  <name>DiamondQ Path Expander: BOM</name>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.diamondq.path-expander</groupId>
+        <artifactId>path-expander-main</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

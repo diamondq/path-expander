@@ -1,0 +1,23 @@
+<configuration>
+  <conversionRule conversionWord="DQLogger" converterClass="com.diamondq.common.utils.logback.DQLogger" />
+  <conversionRule conversionWord="DQMDC" converterClass="com.diamondq.common.utils.logback.DQMDC" />
+  <conversionRule conversionWord="DQIfMDC" converterClass="com.diamondq.common.utils.logback.DQIfMDC" />
+  <conversionRule conversionWord="DQContext" converterClass="com.diamondq.common.utils.logback.DQContext" />
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <!-- %-9.9marker replaced with %-9.9DQMDC(slf4j.marker) as pax-logging-logback currently loses the marker -->
+      <pattern><![CDATA[%d{HH:mm:ss.SSS} [%-16.16thread] %-5level %-36.36logger{36} - %-30.30DQContext{30,true} - %DQContext{}%DQIfMDC{!bundle.id,!bundle.name,!bundle.version,!slf4j.marker,-\s}%DQMDC{!bundle.id,!bundle.name,!bundle.version,!slf4j.marker}%DQIfMDC{!bundle.id,!bundle.name,!bundle.version,!slf4j.marker,\s}%msg%n]]></pattern>
+    </encoder>
+  </appender>
+  <logger name="io.netty.util.internal.PlatformDependent0" level="INFO" />
+  <logger name="com.diamondq.common.lambda" level="DEBUG" />
+  <logger name="com.diamondq.common.utils.context" level="DEBUG" />
+  <logger name="liquibase" level="INFO" />
+  <logger name="org.codehaus.janino" level="INFO" />
+  <logger name="h2database" level="INFO" />
+  <logger name="com.atomikos" level="INFO" />
+  <logger name="io.netty.channel.nio.NioEventLoop" level="INFO" />
+  <root level="TRACE">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
