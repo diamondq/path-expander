@@ -23,12 +23,12 @@
   </properties>
   <distributionManagement>
     <snapshotRepository>
-      <id>1-dq-snapshot</id>
-      <url>https://nexus.diamondq.com/repository/maven-snapshots/</url>
+      <id>ossrh-snap</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
     <repository>
-      <id>2-dq-release</id>
-      <url>https://nexus.diamondq.com/repository/maven-releases/</url>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
   <profiles>
